@@ -1,0 +1,310 @@
+/* CSS Reset */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navbar CSS */
+header {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+nav {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+nav > a {
+  margin-left: 2rem;
+}
+
+nav > a:hover {
+  background-color: black;
+}
+
+/* Homepage CSS*/
+#home {
+  background: #020024;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+
+  color: white;
+}
+
+#hero {
+  text-align: center;
+  padding-bottom: 15rem;
+  padding-top: 15rem;
+  font-size: 2rem;
+}
+
+#transition1 {
+  background: #00d4ff;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 212, 255, 1) 0%,
+    rgba(205, 240, 247, 1) 25%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(240, 222, 252, 1) 75%,
+    rgba(184, 108, 235, 1) 100%
+  );
+  padding-bottom: 20rem;
+  padding-left: 100%;
+}
+
+#transition2 {
+  background: #00d4ff;
+  background: linear-gradient(
+    180deg,
+    rgba(252, 176, 69, 1) 0%,
+    rgb(252, 231, 201, 1) 25%,
+    rgba(255, 255, 255, 1) 50%,
+    rgb(238, 255, 161) 75%,
+    rgba(218, 255, 56, 1) 100%
+  );
+  padding-bottom: 20rem;
+  padding-left: 100%;
+}
+
+#transition3 {
+  background: #00d4ff;
+  background: linear-gradient(
+    180deg,
+    rgba(1, 233, 160, 1) 0%,
+    rgb(208, 255, 240) 25%,
+    rgba(255, 255, 255, 1) 50%,
+    rgb(250, 214, 255, 1) 75%,
+    rgba(243, 150, 255, 1) 100%
+  );
+  padding-bottom: 20rem;
+  padding-left: 100%;
+}
+
+/* About Me CSS */
+
+#aboutMe {
+  background: #b86ceb;
+  background: linear-gradient(
+    180deg,
+    rgba(184, 108, 235, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: white;
+  padding: 2rem;
+  width: 80%;
+  border-radius: 12px;
+
+  text-align: center;
+}
+
+.card h2 {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.card ul {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.card li {
+  background: linear-gradient(0deg, rgb(251, 121, 35), rgb(220, 36, 233));
+  margin-left: 1rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Project CSS */
+
+#projects {
+  background: #b4eb6c;
+  background: linear-gradient(
+    180deg,
+    rgb(218, 255, 56) 0%,
+    rgb(144, 253, 104) 50%,
+    rgb(1, 233, 160) 100%
+  );
+  padding-bottom: 15rem;
+  padding-top: 15rem;
+}
+
+#projects a {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: none;
+
+  background: linear-gradient(
+    180deg,
+    rgb(218, 255, 56) 0%,
+    rgb(144, 253, 104) 50%,
+    rgb(1, 233, 160) 100%
+  );
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.grid-container {
+  display: grid;
+  gap: 20px;
+  flex: 1;
+  align-items: stretch;
+  margin: 1rem;
+}
+
+.grid-item {
+  background-color: white;
+  border-radius: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+
+.grid-item figure {
+  height: 180px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: rgb(112, 239, 112) solid 10px;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+  display: block;
+}
+
+.grid-item h1 {
+  margin-top: auto;
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Contact CSS */
+
+#contacts {
+  background: #c0b9c9;
+  background: linear-gradient(
+    0deg,
+    rgba(192, 185, 201, 1) 0%,
+    rgba(222, 185, 250, 1) 75%,
+    rgba(243, 150, 255, 1) 100%
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15rem;
+  padding-top: 15rem;
+}
+
+
+#contacts form {
+  background: white;
+  padding: 3rem;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 500px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+#contacts form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#contacts form h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+#contacts form p {
+  color: #555;
+  line-height: 1.5;
+}
+
+#contacts input,
+#contacts textarea {
+  padding: 0.75rem 1rem;
+  padding-right: 15rem;
+  border-radius: 8px;
+}
+
+#contacts textarea {
+  min-height: 120px;
+}
+
+#contacts button {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: none;
+
+  background: linear-gradient(135deg, #8a2be2, #ff69b4);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+}
