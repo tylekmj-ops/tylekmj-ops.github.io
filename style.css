@@ -19,43 +19,70 @@ p {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* CSS Variables */
+
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-dark: #020024;
+  --color-cyan: #00d4ff;
+  --color-purple: #b86ceb;
+  --color-orange: #fcb045;
+  --color-green: #daff38;
+  --color-teal: #01e9a0;
+  --color-pink: #f396ff;
+  --color-contact: #c0b9c9;
+  --color-accent-purple: #8a2be2;
+  --color-accent-pink: #ff69b4;
+  --color-text-muted: #555555;
+  --color-border-green: rgb(112, 239, 112);
+}
+
 /* Navbar CSS */
+
 header {
   display: flex;
   justify-content: space-between;
-  text-align: center;
+  align-items: center;
   padding: 20px;
   position: sticky;
   top: 0;
-  background-color: white;
+  background-color: var(--color-white);
+  z-index: 100;
 }
 
-nav {
+nav ul {
   font-size: 2rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
 }
 
-nav > a {
+nav a {
+  display: block;
   margin-left: 2rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav > a:hover {
-  background-color: black;
+nav a:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
 }
 
-/* Homepage CSS*/
+/* Homepage CSS */
+
 #home {
-  background: #020024;
+  background: var(--color-dark);
   background: linear-gradient(
     180deg,
     rgba(2, 0, 36, 1) 0%,
     rgba(9, 9, 121, 1) 35%,
     rgba(0, 212, 255, 1) 100%
   );
-
-  color: white;
+  color: var(--color-white);
 }
 
 #hero {
@@ -66,7 +93,7 @@ nav > a:hover {
 }
 
 #transition1 {
-  background: #00d4ff;
+  background: var(--color-cyan);
   background: linear-gradient(
     180deg,
     rgba(0, 212, 255, 1) 0%,
@@ -80,7 +107,7 @@ nav > a:hover {
 }
 
 #transition2 {
-  background: #00d4ff;
+  background: var(--color-orange);
   background: linear-gradient(
     180deg,
     rgba(252, 176, 69, 1) 0%,
@@ -94,7 +121,7 @@ nav > a:hover {
 }
 
 #transition3 {
-  background: #00d4ff;
+  background: var(--color-teal);
   background: linear-gradient(
     180deg,
     rgba(1, 233, 160, 1) 0%,
@@ -110,14 +137,13 @@ nav > a:hover {
 /* About Me CSS */
 
 #aboutMe {
-  background: #b86ceb;
+  background: var(--color-purple);
   background: linear-gradient(
     180deg,
     rgba(184, 108, 235, 1) 0%,
     rgba(253, 29, 29, 1) 50%,
     rgba(252, 176, 69, 1) 100%
   );
-
   padding-top: 15rem;
   padding-bottom: 15rem;
 }
@@ -129,11 +155,10 @@ nav > a:hover {
 }
 
 .card {
-  background: white;
+  background: var(--color-white);
   padding: 2rem;
   width: 80%;
   border-radius: 12px;
-
   text-align: center;
 }
 
@@ -155,7 +180,7 @@ nav > a:hover {
   padding: 0.75rem;
   border-radius: 8px;
   border: none;
-  color: white;
+  color: var(--color-white);
   font-size: 1rem;
   font-weight: bold;
 }
@@ -163,7 +188,7 @@ nav > a:hover {
 /* Project CSS */
 
 #projects {
-  background: #b4eb6c;
+  background: var(--color-green);
   background: linear-gradient(
     180deg,
     rgb(218, 255, 56) 0%,
@@ -179,16 +204,21 @@ nav > a:hover {
   padding: 0.75rem;
   border-radius: 8px;
   border: none;
-
   background: linear-gradient(
     180deg,
     rgb(218, 255, 56) 0%,
     rgb(144, 253, 104) 50%,
     rgb(1, 233, 160) 100%
   );
-  color: white;
+  color: var(--color-white);
   font-size: 2rem;
   font-weight: bold;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#projects a:hover {
+  opacity: 0.75;
+  transform: translateY(-2px);
 }
 
 .grid-container {
@@ -200,7 +230,7 @@ nav > a:hover {
 }
 
 .grid-item {
-  background-color: white;
+  background-color: var(--color-white);
   border-radius: 12px;
   text-align: center;
   display: flex;
@@ -208,22 +238,27 @@ nav > a:hover {
   height: 100%;
   padding: 1.5rem;
   gap: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .grid-item figure {
   height: 180px;
   width: 100%;
-
   display: flex;
   align-items: center;
   justify-content: center;
-  border: rgb(112, 239, 112) solid 10px;
+  border: var(--color-border-green) solid 10px;
 }
 
 .grid-item img {
   width: 100%;
   height: 100%;
-  object-fit: contain; 
+  object-fit: contain;
   display: block;
 }
 
@@ -231,23 +266,34 @@ nav > a:hover {
   margin-top: auto;
 }
 
+/* Responsive Design */
+
 @media (min-width: 768px) {
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card {
+    width: 60%;
+  }
+}
+
 /* Contact CSS */
 
 #contacts {
-  background: #c0b9c9;
+  background: var(--color-contact);
   background: linear-gradient(
     0deg,
     rgba(192, 185, 201, 1) 0%,
     rgba(222, 185, 250, 1) 75%,
     rgba(243, 150, 255, 1) 100%
   );
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -255,18 +301,15 @@ nav > a:hover {
   padding-top: 15rem;
 }
 
-
 #contacts form {
-  background: white;
+  background: var(--color-white);
   padding: 3rem;
   border-radius: 16px;
   width: 100%;
   max-width: 500px;
-
   display: flex;
   flex-direction: column;
   gap: 2rem;
-
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
@@ -282,7 +325,7 @@ nav > a:hover {
 }
 
 #contacts form p {
-  color: #555;
+  color: var(--color-text-muted);
   line-height: 1.5;
 }
 
@@ -302,9 +345,15 @@ nav > a:hover {
   padding: 0.75rem;
   border-radius: 8px;
   border: none;
-
-  background: linear-gradient(135deg, #8a2be2, #ff69b4);
-  color: white;
+  background: linear-gradient(135deg, var(--color-accent-purple), var(--color-accent-pink));
+  color: var(--color-white);
   font-size: 1rem;
   font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#contacts button:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
 }
