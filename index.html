@@ -3,166 +3,286 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tylek Johnson | Portfolio</title>
+    <title>Tylek Johnson | Software Engineer</title>
+    <meta
+      name="description"
+      content="Tylek Johnson builds interactive web experiences that make complex ideas feel simple."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
+    <!-- Hides hero text only until GSAP animates it in (removed in main.js if GSAP fails) -->
+    <script>document.documentElement.classList.add("js");</script>
   </head>
   <body>
-    <header>
-      <h1>Tylek Johnson</h1>
-      <nav>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Tylek Johnson, back to top">
+        <span class="brand-mark" aria-hidden="true">TJ</span>
+        <span class="brand-name">Tylek Johnson</span>
+      </a>
+      <nav aria-label="Primary">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#aboutMe">About</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#contacts">Contact</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <section id="home">
-        <section id="hero">
-          <h1>Hello, I'm Tylek</h1>
-          <br />
-          <p>Creative problem solver</p>
-          <br />
-          <p>
-            An aspiring software enginner at Marcy Lab School with a passion for
-            creating experiences for others to enjoy
+    <main id="main">
+      <!-- ============ HERO ============ -->
+      <section id="home" class="hero">
+        <div class="hero-orbs" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="hero-inner">
+          <p class="eyebrow hero-anim">Software Engineer · Brooklyn, NY</p>
+          <h1 class="hero-title hero-anim">Hi, I'm Tylek.</h1>
+          <p class="hero-tagline hero-anim">
+            I build interactive web experiences that make complex ideas feel
+            <span class="highlight">simple</span>.
           </p>
-        </section>
+          <p class="hero-sub hero-anim">
+            Software engineering at The Marcy Lab School, with a passion
+            for creating experiences other people enjoy.
+          </p>
+          <div class="hero-actions hero-anim">
+            <a class="btn btn-primary" href="#projects">View my work</a>
+          </div>
+        </div>
       </section>
 
-      <div id="transition1"></div>
+      <div class="fade fade-1" aria-hidden="true"></div>
 
-      <section id="aboutMe">
-        <div class="container">
-          <div class="card">
-            <h2>About Me</h2>
+      <!-- ============ ABOUT ============ -->
+      <section id="about" class="section about">
+        <div class="card about-card reveal">
+            <img class="about-photo" src="img/tylek.jpg" alt="Tylek Johnson smiling" width="160" height="160" />
+          <div class="about-body">
+            <p class="eyebrow">01 · About</p>
+            <h2>From building game levels to building the web</h2>
             <p>
               I'm Tylek Johnson, a software engineer from Brooklyn, New York. I
-              joined The Marcy Lab School straight out of high school because of
-              my passion for tech which stemmed from a desire to create things,
-              growing up i played a lot of games that encouraged freedom and
-              creativity, games that let you build your own levels, skills, or
-              areas and I enjoyed making things that others enjoyed which led me
-              to pursue tech because programming is something that awakens my
-              childlike sense of creativity. When I'm not coding, I usually go out
-              and hang out with friends and just mess around.
+              joined The Marcy Lab School straight out of high school because I
+              wanted to make things.
+            </p>
+            <p>
+              Growing up, I gravitated toward games that let you build your own
+              levels, skills and worlds. My favorite part was making something
+              that other people enjoyed playing. Programming gives me that same
+              feeling. It wakes up the kid in me who wanted to create.
             </p>
 
-            <h2>Skills</h2>
-            <ul id="skills">
+            <h3>Toolkit</h3>
+            <ul class="tags" aria-label="Skills">
               <li>HTML</li>
               <li>CSS</li>
-              <li>Javascript</li>
+              <li>JavaScript</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <div id="transition2"></div>
+      <div class="fade fade-2" aria-hidden="true"></div>
 
-      <section id="projects">
-        <ul class="grid-container">
-          <li class="grid-item">
-            <figure>
-              <img src="img/checkpoint.png" alt="Instagram Page Recreation screenshot" />
-            </figure>
-            <h1>Instagram Page Recreation</h1>
-            <p>A recreation of Ada Lovelace instagram page using html & css</p>
-            <a
-              href="https://github.com/The-Marcy-Lab-School-Assignments/swe-checkpoint-3-1-html-css-tylekmj-ops"
-              >Repo</a
-            >
+      <!-- ============ PROJECTS ============ -->
+      <section id="projects" class="section projects">
+        <header class="section-head reveal">
+          <p class="eyebrow">02 · Projects</p>
+          <h2>Things I've built</h2>
+        </header>
+
+        <article class="card feature reveal">
+          <div class="feature-visual" role="img" aria-label="Quantum Lab preview">
+            <span class="atom-core"></span>
+            <span class="atom-orbit o1"><i></i></span>
+            <span class="atom-orbit o2"><i></i></span>
+            <span class="atom-orbit o3"><i></i></span>
+          </div>
+          <div class="feature-body">
+            <p class="eyebrow">Featured</p>
+            <h3>Quantum Lab</h3>
+            <p>
+              An interactive lab that makes quantum concepts feel simple to explore.
+            </p>
+            <ul class="tags" aria-label="Technologies">
+
+              <li>JavaScript</li>
+            </ul>
+            <div class="links">
+              <a class="btn btn-sm btn-dark" href="#">Live ↗</a>
+              <a class="btn btn-sm btn-outline" href="#">Code</a>
+              <a class="btn btn-sm btn-text" href="#">Read the case study →</a>
+            </div>
+          </div>
+        </article>
+
+        <ul class="project-grid">
+          <li class="card project reveal">
+            <img
+              src="img/checkpoint.png"
+              alt="Screenshot of a recreated Instagram profile page for Ada Lovelace, with a profile header and photo grid"
+              loading="lazy"
+            />
+            <div class="project-body">
+              <h3>Instagram Page Recreation</h3>
+              <p>
+                A recreation of Ada Lovelace's Instagram profile, matching a
+                real-world layout with HTML and CSS.
+              </p>
+              <ul class="tags" aria-label="Technologies">
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+              <div class="links">
+                <a
+                  class="btn btn-sm btn-outline"
+                  href="https://github.com/The-Marcy-Lab-School-Assignments/swe-checkpoint-3-1-html-css-tylekmj-ops"
+                  target="_blank"
+                  rel="noopener"
+                  >Code</a
+                >
+              </div>
+            </div>
           </li>
 
-          <li class="grid-item">
-            <figure>
-              <img src="img/portfolio.png" alt="Portfolio website screenshot" />
-            </figure>
-            <h1>Portfolio</h1>
-            <p>This very website</p>
-            <a href="https://github.com/tylekmj-ops/tylekmj-ops.github.io"
-              >Repo</a
-            >
+          <li class="card project reveal">
+            <img
+              src="img/forms.png"
+              alt="Screenshot of a styled web form with labeled input fields"
+              loading="lazy"
+            />
+            <div class="project-body">
+              <h3>Form Page</h3>
+              <p>
+                A form page built with semantic HTML inputs and labels, styled
+                with CSS.
+              </p>
+              <ul class="tags" aria-label="Technologies">
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+              <div class="links">
+                <a
+                  class="btn btn-sm btn-outline"
+                  href="https://github.com/The-Marcy-Lab-School-Assignments/swe-3-3-forms-tylekmj-ops"
+                  target="_blank"
+                  rel="noopener"
+                  >Code</a
+                >
+              </div>
+            </div>
           </li>
 
-          <li class="grid-item">
-            <figure>
-              <img src="img/forms.png" alt="Form Page screenshot" />
-            </figure>
-            <h1>Form Page</h1>
-            <p>A form page made in html & css</p>
-            <a
-              href="https://github.com/The-Marcy-Lab-School-Assignments/swe-3-3-forms-tylekmj-ops"
-              >Repo</a
-            >
-          </li>
-
-          <li class="grid-item">
-            <figure>
-              <img src="img/recipe.png" alt="Recipe Page screenshot" />
-            </figure>
-            <h1>Recipe Page</h1>
-            <p>A webpage about cornbread with links to 3 different pages</p>
-            <a
-              href="https://github.com/The-Marcy-Lab-School-Assignments/swe-3-1-recipe-card-tylekmj-ops"
-              >Repo</a
-            >
+          <li class="card project reveal">
+            <img
+              src="img/recipe.png"
+              alt="Screenshot of a cornbread recipe page with ingredients and steps"
+              loading="lazy"
+            />
+            <div class="project-body">
+              <h3>Recipe Page</h3>
+              <p>
+                A multi-page recipe site about cornbread, linking out to three
+                related pages.
+              </p>
+              <ul class="tags" aria-label="Technologies">
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+              <div class="links">
+                <a
+                  class="btn btn-sm btn-outline"
+                  href="https://github.com/The-Marcy-Lab-School-Assignments/swe-3-1-recipe-card-tylekmj-ops"
+                  target="_blank"
+                  rel="noopener"
+                  >Code</a
+                >
+              </div>
+            </div>
           </li>
         </ul>
       </section>
 
-      <div id="transition3"></div>
+      <div class="fade fade-3" aria-hidden="true"></div>
 
-      <section id="contacts">
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <div>
-            <h1>Get in touch</h1>
+      <!-- ============ CONTACT ============ -->
+      <section id="contact" class="section contact">
+        <div class="card contact-card reveal">
+          <div class="contact-intro">
+            <p class="eyebrow">03 · Contact</p>
+            <h2>Get in touch</h2>
             <p>
-              I'm always looking for new opportunities and would be happy to
-              collaborate with people.
+              I'm always looking for new opportunities and I'm happy to
+              collaborate. The fastest way to reach me is email.
             </p>
+            <a class="btn btn-primary" href="mailto:tylekmj@gmail.com">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="m3 7 9 6 9-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+              Email me
+            </a>
+
+            <h3>Find me elsewhere</h3>
+            <ul class="socials">
+              <li>
+                <a href="https://github.com/tylekmj-ops" target="_blank" rel="noopener">
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/tylek-johnson-866989375/" target="_blank" rel="noopener">
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+                  LinkedIn
+                </a>
+              </li>
+            </ul>
           </div>
-          <div>
-            <div>
-              <label for="name">Name</label><br />
-              <input type="text" id="name" name="name" />
-            </div>
 
-            <div>
-              <label for="email">Email</label><br />
-              <input type="email" id="email" name="email" />
+          <!--
+            TODO: create a free form at https://formspree.io, then replace YOUR_FORM_ID
+            below. Until then, the form hides itself and only the Email button shows.
+          -->
+          <form
+            class="contact-form"
+            action="https://formspree.io/f/mppddojj"
+            method="POST"
+          >
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required />
             </div>
-            <div>
-              <label for="message">Message</label><br />
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Your message..."
-              ></textarea>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required />
             </div>
-
-            <button type="submit">Send Message</button>
-
-            <div>
-              <h1>You can also find me on</h1>
-              <ul>
-                <li><a href="mailto:tylekmj@gmail.com">✉️tylekmj@gmail.com</a></li>
-                <li><a href="https://github.com/tylekmj-ops">💻tylekmj-ops</a></li>
-                <li>
-                  <a href="https://www.linkedin.com/in/tylek-johnson-866989375/"
-                    >🧑‍🦲Tylek Johnson</a
-                  >
-                </li>
-              </ul>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Say hi…" required></textarea>
             </div>
-          </div>
-        </form>
+            <button class="btn btn-primary" type="submit">Send message</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
       </section>
     </main>
 
-    <footer></footer>
+    <footer class="site-footer">
+      <p>© <span id="year">2026</span> Tylek Johnson</p>
+      <ul>
+        <li><a href="https://github.com/tylekmj-ops" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/tylek-johnson-866989375/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="mailto:tylekmj@gmail.com">Email</a></li>
+      </ul>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
