@@ -15,7 +15,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <!-- Hides hero text only until GSAP animates it in (removed in main.js if GSAP fails) -->
     <script>document.documentElement.classList.add("js");</script>
   </head>
   <body>
@@ -63,7 +62,7 @@
       <!-- ============ ABOUT ============ -->
       <section id="about" class="section about">
         <div class="card about-card reveal">
-            <img class="about-photo" src="img/tylek.jpg" alt="Tylek Johnson smiling" width="160" height="160" />
+            <img class="about-photo" src="img/tylek.png" alt="Tylek Johnson smiling" width="160" height="160" />
           <div class="about-body">
             <p class="eyebrow">01 · About</p>
             <h2>From building game levels to building the web</h2>
@@ -80,11 +79,40 @@
             </p>
 
             <h3>Toolkit</h3>
-            <ul class="tags" aria-label="Skills">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-            </ul>
+            <div class="toolkit">
+              <h4>Languages</h4>
+              <ul class="tags" aria-label="Languages">
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>SQL</li>
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+
+              <h4>Libraries, Frameworks &amp; Environments</h4>
+              <ul class="tags" aria-label="Libraries, frameworks and environments">
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>Vite</li>
+                <li>Bootstrap</li>
+              </ul>
+
+              <h4>Tools &amp; Testing</h4>
+              <ul class="tags" aria-label="Tools and testing">
+                <li>Visual Studio Code</li>
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>Postgres</li>
+                <li>TablePlus</li>
+              </ul>
+
+              <h4>AI-Assisted Development</h4>
+              <ul class="tags" aria-label="AI-assisted development">
+                <li>Claude Code</li>
+                <li>Prompt Engineering</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -99,12 +127,12 @@
         </header>
 
         <article class="card feature reveal">
-          <div class="feature-visual" role="img" aria-label="Quantum Lab preview">
-            <span class="atom-core"></span>
-            <span class="atom-orbit o1"><i></i></span>
-            <span class="atom-orbit o2"><i></i></span>
-            <span class="atom-orbit o3"><i></i></span>
-          </div>
+          <img
+            src="img/quantumlabs.png"
+            alt="Quantum Lab home page: a starry night-sky hero reading 'Experience Tomorrow's Technology. Not by reading about it. By living it.' with New User and Continue Your Journey buttons"
+            width="2940"
+            height="1472"
+          />
           <div class="feature-body">
             <p class="eyebrow">Featured</p>
             <h3>Quantum Lab</h3>
@@ -112,13 +140,13 @@
               An interactive lab that makes quantum concepts feel simple to explore.
             </p>
             <ul class="tags" aria-label="Technologies">
-
-              <li>JavaScript</li>
+              <li>Python</li>
+              <li>React</li>
+              <li>Postgres</li>
             </ul>
             <div class="links">
-              <a class="btn btn-sm btn-dark" href="#">Live ↗</a>
-              <a class="btn btn-sm btn-outline" href="#">Code</a>
-              <a class="btn btn-sm btn-text" href="#">Read the case study →</a>
+              <a class="btn btn-sm btn-dark" href="https://quantum-lab-4m1g.onrender.com/">Live ↗</a>
+              <a class="btn btn-sm btn-outline" href="https://github.com/Lumina-Marcy/Quantum-Lab" target="_blank" rel="noopener noreferrer">Code</a>
             </div>
           </div>
         </article>
@@ -126,24 +154,27 @@
         <ul class="project-grid">
           <li class="card project reveal">
             <img
-              src="img/checkpoint.png"
-              alt="Screenshot of a recreated Instagram profile page for Ada Lovelace, with a profile header and photo grid"
+              src="img/jobapplicationtracker.png"
+              alt="Job Application Tracker sign-in screen with side-by-side Log In and Register cards"
               loading="lazy"
             />
             <div class="project-body">
-              <h3>Instagram Page Recreation</h3>
+              <h3>Job Application Tracker</h3>
               <p>
-                A recreation of Ada Lovelace's Instagram profile, matching a
-                real-world layout with HTML and CSS.
+                A full-stack app for keeping track of every job application and
+                its status, so navigating the job market feels organized
+                instead of overwhelming.
               </p>
               <ul class="tags" aria-label="Technologies">
-                <li>HTML</li>
-                <li>CSS</li>
+                <li>React</li>
+                <li>Express.js</li>
+                <li>Postgres</li>
               </ul>
               <div class="links">
+                <a class="btn btn-sm btn-dark" href="https://full-stack-project-remix-tylekmj-ops.onrender.com/">Live ↗</a>
                 <a
                   class="btn btn-sm btn-outline"
-                  href="https://github.com/The-Marcy-Lab-School-Assignments/swe-checkpoint-3-1-html-css-tylekmj-ops"
+                  href="https://github.com/The-Marcy-Lab-School-Assignments/full-stack-project-remix-tylekmj-ops"
                   target="_blank"
                   rel="noopener"
                   >Code</a
@@ -154,24 +185,26 @@
 
           <li class="card project reveal">
             <img
-              src="img/forms.png"
-              alt="Screenshot of a styled web form with labeled input fields"
+              src="img/eventplanner.jpeg"
+              alt="EventPlanner's Upcoming Events page showing event cards for a networking mixer, CSS workshop, jazz concert, React conference and charity run, each with an RSVP button"
               loading="lazy"
             />
             <div class="project-body">
-              <h3>Form Page</h3>
+              <h3>EventPlanner</h3>
               <p>
-                A form page built with semantic HTML inputs and labels, styled
-                with CSS.
+                Host your own events and RSVP to events created by other users,
+                with filters by event type and capacity.
               </p>
               <ul class="tags" aria-label="Technologies">
-                <li>HTML</li>
-                <li>CSS</li>
+                <li>React</li>
+                <li>Express.js</li>
+                <li>Postgres</li>
               </ul>
               <div class="links">
+                <a class="btn btn-sm btn-dark" href="https://swe-project-6-event-planner-backend-tyqt.onrender.com/">Live ↗</a>
                 <a
                   class="btn btn-sm btn-outline"
-                  href="https://github.com/The-Marcy-Lab-School-Assignments/swe-3-3-forms-tylekmj-ops"
+                  href="https://github.com/The-Marcy-Lab-School-Assignments/swe-project-6-event-planner-backend-tylekmj-ops"
                   target="_blank"
                   rel="noopener"
                   >Code</a
@@ -182,24 +215,26 @@
 
           <li class="card project reveal">
             <img
-              src="img/recipe.png"
-              alt="Screenshot of a cornbread recipe page with ingredients and steps"
+              src="img/artview.jpeg"
+              alt="Artview gallery page with an artwork keyword search, a Favorites panel, and a grid of landscape paintings"
               loading="lazy"
             />
             <div class="project-body">
-              <h3>Recipe Page</h3>
+              <h3>Artview</h3>
               <p>
-                A multi-page recipe site about cornbread, linking out to three
-                related pages.
+                Explore art from the comfort of your own home: search artworks
+                by keyword, expand any piece, and save your favorites.
               </p>
               <ul class="tags" aria-label="Technologies">
+                <li>JavaScript</li>
                 <li>HTML</li>
                 <li>CSS</li>
               </ul>
               <div class="links">
+                <a class="btn btn-sm btn-dark" href="https://artview.onrender.com/">Live ↗</a>
                 <a
                   class="btn btn-sm btn-outline"
-                  href="https://github.com/The-Marcy-Lab-School-Assignments/swe-3-1-recipe-card-tylekmj-ops"
+                  href="https://sanaa-tylek-mls.github.io/mod-4-project/"
                   target="_blank"
                   rel="noopener"
                   >Code</a
